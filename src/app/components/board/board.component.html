@@ -1,9 +1,9 @@
 <div class="container-md">
-    <h1> Current player {{currPlayer}}</h1>
+    <h1 class="mb-5"> Current player {{currPlayer}}</h1>
 
-    <button type="button" class="btn btn-secondary mb-3" (click)="newGame()">Start New Game</button>
+    <button type="button" class="btn btn-secondary mb-4" (click)="newGame()">Start New Game</button>
     
-    <div *ngIf="winner">
+    <div *ngIf="winner" [ngClass]="{'winner-grn': winner == 'X', 'winner-blue': winner == 'O'}">
        <h1>The winner is {{winner}}</h1> 
     </div>
     

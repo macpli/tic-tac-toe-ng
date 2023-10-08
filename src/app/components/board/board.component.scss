@@ -1,12 +1,16 @@
 main {
     display: grid;
     grid-template-columns: 200px 200px 200px;
-    grid-gap: 0px
+    grid-gap: 2px;
+    background-color: black;
 }
 
 app-player {
-    border: 1px gray solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
+    background-color: white;
 }
 
 .container-md {
@@ -14,4 +18,12 @@ app-player {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.winner-grn {
+    color: #198754;
+}
+
+.winner-blue {
+    color: #0d6efd;
 }
