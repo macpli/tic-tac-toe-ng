@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BoardComponent } from './components/board/board.component';
 import { PlayerComponent } from './components/player/player.component';
+import { StartComponent } from './components/start/start.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
-    PlayerComponent
+    PlayerComponent,
+    StartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    RouterModule.forRoot([
+      {path: 'play', component: BoardComponent},
+      {path: '**', component: StartComponent},
+      {path: '', component: StartComponent},
+    ]),
   ],
   providers: [],
   bootstrap: [AppComponent]
