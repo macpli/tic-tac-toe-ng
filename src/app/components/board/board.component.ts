@@ -33,7 +33,6 @@ export class BoardComponent {
     }
 
     this.winner = this.calculateWinner();
-    console.log(this.squares)
   }
 
   calculateWinner(){
