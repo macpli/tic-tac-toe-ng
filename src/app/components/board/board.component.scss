@@ -13,6 +13,11 @@ app-player {
     background-color: white;
 }
 
+.container-btns {
+    width: 100%;
+    justify-content: space-between;
+}
+
 .container-md {
     display: flex;
     flex-direction: column;
