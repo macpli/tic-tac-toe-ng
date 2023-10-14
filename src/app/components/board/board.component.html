@@ -4,7 +4,10 @@
     <button type="button" class="btn btn-secondary mb-4" (click)="newGame()">Start New Game</button>
     
     <div *ngIf="winner" [ngClass]="{'winner-grn': winner == 'X', 'winner-blue': winner == 'O'}">
-       <h1>The winner is {{winner}}</h1> 
+        <h1 >
+            <span *ngIf="winner != 'draw'">The winner is {{winner}}!</span>
+            <span *ngIf="winner == 'draw'">It is a draw</span>
+        </h1> 
     </div>
     
     <main>
@@ -12,7 +15,6 @@
             *ngFor="let val of squares; let i = index"
             [player]="val"
             (click)="makeMove(i)">
-            
         </app-player>
     </main>
 </div>

@@ -33,6 +33,7 @@ export class BoardComponent {
     }
 
     this.winner = this.calculateWinner();
+    console.log(this.squares)
   }
 
   calculateWinner(){
@@ -57,7 +58,10 @@ export class BoardComponent {
       ){
         console.log(this.squares[a])
         return this.squares[a] 
-      }
+      } 
+    }
+     if(this.squares.every(square => square !== null && this.winner == null) ){
+      return 'draw';
     }
     return null;
   }
